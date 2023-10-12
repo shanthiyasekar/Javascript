@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/**
+*   !setting the navbar to height 100 and bg color
+**/ 
+header{  
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: aqua;
+    padding:30px;
+    height: 100px;
+}
+/**
+*   !this is used to separate the clothing and cart to display on the same line
+**/
+ul{
+    display:flex;
+    justify-content: space-between;
+}
+ul li{
+    list-style-type: none;
+}
+.cart{
+    position: relative;
+    padding:10px;
+    cursor: pointer;
+}
+.cart_number{
+    position:absolute;  
+    top:-15px;
+    right:-5px;
+}
+.card{
+    display:grid;
+    grid-template-columns: repeat(4,250px);
+    column-gap: 50px;
+    justify-content: center;    
+    /* border:1px solid black; */
+}
+@media (max-width:1000px)
+{
+    .card{
+        grid-template-columns: repeat(2,250px);
+    }
+}
+@media (max-width:500px)
+{
+    .card{
+        grid-template-columns:repeat(1,250px);
+    }
+}
+.item
+{
+    background-color: rgba(255, 255, 255, 0.8);
+   
+    border-radius: 4px;
+    margin-top:30px;
+}
+ 
+.details{
+    padding:10px;
+}
+.details h3{
+    margin-bottom: 5px;
+}
+.price_quantity{
+    margin-top:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price_quantity h4{
+    font-size:20px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+}
+.plus-icon {
+    color: green; /* Set the color to green or your desired color */
+}
+
+/* Style the minus icon (red) */
+.minus-icon {
+    color: red; /* Set the color to red or your desired color */
+}
+a{
+    text-decoration: none;
+    color:black
+}
+
+
