@@ -78,10 +78,7 @@ let increment=(selectedId)=>{
         itemFound.quantity+=1;
         updateQuantity(selectedId.id,itemFound.quantity);
         localStorage.setItem("cartDetails",JSON.stringify(shopItemData));
-        //cartCount.itemsCount=cartCount.itemsCount+1;
-        //updateCart(cartCount.itemsCount);
     }
-   
 }
 let decrement=(selectedId)=>{
     let id=selectedId.id;
@@ -90,12 +87,7 @@ let decrement=(selectedId)=>{
     {
         itemFound.quantity-=1;
         updateQuantity(selectedId.id,itemFound.quantity);
-        
-     shopItemData = shopItemData.filter((x) => x.quantity > 0);
-    localStorage.setItem("cartDetails", JSON.stringify(shopItemData));
-       
-        //cartCount.itemsCount-=1;
-        //updateCart(cartCount.itemsCount);
+        localStorage.setItem("cartDetails", JSON.stringify(shopItemData));
     }
     else{
         alert("this item is no more in the cart");

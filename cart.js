@@ -19,24 +19,23 @@ let generateCartItems=()=>{
 
     product_details.innerHTML = "";
 
-    if (itemsWithQuantity.length !== 0) {
-       
-
+    if (itemsWithQuantity.length !== 0) 
+    {
         itemsWithQuantity.forEach((item) => {
             cartIsEmpty = false;
 
             let productElement = document.createElement("div");
             productElement.innerHTML = `
                 <div id="product_id_${item.id}" class="item">
-                    <img width="250" height="300" src="${item.img}"/>
+                    <img width="100" height="100" src="${item.img}"/>
                     <div class="details">
                         <h3>${item.name}</h3>
-                        <p>${item.desc}</p>
                         <div class="price_quantity">
-                            <h2>$ ${item.price}</h2>
-                            <div class="buttons">
-                                <div id=${item.id} class="quantity">${item.quantity}</div>
-                            </div>
+                        <h2>$ ${item.price}</h2>
+                        <div class="buttons">
+                            <i onclick="increment(${item.id})" class="fa-solid fa-plus plus-icon"></i>
+                            <div id=${item.id} class="quantity">${item.quantity}</div>
+                            <i onclick="decrement(${item.id})" class="fa-solid fa-minus minus-icon"></i>
                         </div>
                     </div>
                 </div>
@@ -45,7 +44,12 @@ let generateCartItems=()=>{
             product_details.appendChild(productElement);
         });
     } else {
-        document.getElementById("empty_cart").innerHTML = "Cart is empty";
+        document.getElementById("empty_cart").innerHTML = `<h2>Cart is empty</h2>
+            <a href="index.html">
+                <button class="HomeBtn">Back To Home</button>
+            </a>
+        `;
+
     }
     
 }

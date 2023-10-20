@@ -84,15 +84,36 @@ ul li{
 }
 .plus-icon {
     color: green; /* Set the color to green or your desired color */
+    cursor:pointer;
 }
 
 /* Style the minus icon (red) */
 .minus-icon {
     color: red; /* Set the color to red or your desired color */
+    cursor:pointer;
 }
 a{
     text-decoration: none;
     color:black
 }
 
+#empty_cart
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+    
+}
+.HomeBtn
+{
+    background-color: #212529;
+    color:white;
+    border:none;
+    padding:6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+}
 
